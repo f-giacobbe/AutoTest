@@ -7,9 +7,8 @@ import random
 # To be tuned by the user
 split_symbol = ","
 subjects_list = [
-	Subject("Fondamenti di Elettromagnetismo - Definizioni e formule", "questions/elettromagnetismo_def.csv"),
-	Subject("Fondamenti di Elettromagnetismo - Dimostrazioni", "questions/elettromagnetismo_dim.csv"),
-	Subject("Analisi 2 - Definizioni", "questions/analisi2_def.csv")
+	Subject("Geography", "questions/geography.csv"),
+	Subject("Math", "questions/math.csv")
 ]
 
 
@@ -43,7 +42,7 @@ with open(subject.questions_path, "r") as questions_file:
 		flashcards.append(flashcard)
 
 #shuffle
-random.shuffle(flashcards)
+#random.shuffle(flashcards)
 
 
 
@@ -54,6 +53,7 @@ while len(flashcards) > 0:
 
 	print("\n\tLet's start...")
 
+	random.shuffle(flashcards)
 	flashcards_copy = flashcards[:]
 	for q in flashcards_copy:
 		print(f"\n{q.question}")
